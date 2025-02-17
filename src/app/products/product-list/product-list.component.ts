@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DataService } from '../../shared/data.service'; // Import the DataService
-import { PRODUCTS } from '../mock-products'; // Import the mock products
+import { DataService } from '../../shared/data.service';
+import { PRODUCTS } from '../mock-products';
 
 @Component({
   selector: 'app-product-list',
@@ -8,7 +8,7 @@ import { PRODUCTS } from '../mock-products'; // Import the mock products
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = PRODUCTS; // Fetch and assign mock products
+  products = PRODUCTS;
 
   constructor(private dataService: DataService) {}
 

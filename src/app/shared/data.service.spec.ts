@@ -6,7 +6,7 @@ describe('DataService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DataService); // Inject the service
+    service = TestBed.inject(DataService);
   });
 
   it('should be created', () => {
@@ -14,13 +14,13 @@ describe('DataService', () => {
   });
 
   it('should add an item to favorites', () => {
-    service.addToFavorites({ id: 1, name: 'Test' }); // Add an item to the favorites
-    expect(service.getFavorites().length).toBe(1); // Check that the length is 1
+    service.addToFavorites({ id: 1, name: 'Test' });
+    expect(service.getFavorites().length).toBe(1);
   });
 
   it('should return the correct favorite item', () => {
     const item = { id: 2, name: 'Another Test' };
-    service.addToFavorites(item); // Add another item
-    expect(service.getFavorites()).toContain(item); // Verify that the item exists in the favorites
+    service.addToFavorites(item);
+    expect(service.getFavorites()).toContain(item);
   });
 });

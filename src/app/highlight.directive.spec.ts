@@ -5,7 +5,6 @@ describe('HighlightDirective', () => {
   let elementRef: ElementRef;
 
   beforeEach(() => {
-    // Create a mock ElementRef with a basic div element
     elementRef = new ElementRef(document.createElement('div'));
   });
 

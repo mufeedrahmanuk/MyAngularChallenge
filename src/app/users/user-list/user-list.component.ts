@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DataService } from '../../shared/data.service'; // Import the DataService
-import { USERS } from '../mock-users'; // Import the mock users
+import { DataService } from '../../shared/data.service';
+import { USERS } from '../mock-users';
 
 @Component({
   selector: 'app-user-list',
@@ -8,7 +8,7 @@ import { USERS } from '../mock-users'; // Import the mock users
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent {
-  users = USERS; // Fetch and assign mock users
+  users = USERS;
 
   constructor(private dataService: DataService) {}
 

@@ -23,6 +23,6 @@ describe('AppComponent', () => {
   it('should contain a router-outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('router-outlet')).not.toBeNull();  // Check if <router-outlet> exists in the DOM
+    expect(compiled.querySelector('router-outlet')).not.toBeNull();
   });
 });

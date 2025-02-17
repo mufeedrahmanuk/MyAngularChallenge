@@ -1,7 +1,6 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
 
-/* Global Styles */
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #0a0a0a;
@@ -11,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-/* User Details Container */
+
 .futuristic-user-details {
   display: flex;
   min-height: 100vh;
@@ -19,7 +18,7 @@ body {
   padding: 20px;
 }
 
-/* Left Section: User Info */
+
 .user-info-section {
   flex: 1;
   padding: 40px;
@@ -57,7 +56,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Back to List Button */
+
 .btn-back-to-list {
   padding: 10px 20px;
   background: transparent;
@@ -80,7 +79,7 @@ body {
   box-shadow: 0 0 15px rgba(255, 77, 0, 0.8);
 }
 
-/* Right Section: Edit Form */
+
 .edit-form-section {
   flex: 1;
   padding: 40px;
@@ -134,7 +133,7 @@ body {
   outline: none;
 }
 
-/* Submit Button */
+
 .btn-submit {
   padding: 10px 20px;
   background: linear-gradient(135deg, #ff4d00, #8e2de2);
@@ -161,7 +160,7 @@ body {
   box-shadow: none;
 }
 
-/* Success Message */
+
 .success-message {
   margin-top: 20px;
   padding: 10px;
@@ -182,7 +181,7 @@ body {
   }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .futuristic-user-details {
     flex-direction: column;

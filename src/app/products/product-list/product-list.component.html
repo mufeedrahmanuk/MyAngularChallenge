@@ -1,20 +1,20 @@
 <div class="futuristic-container">
-  <!-- Header Section -->
+
   <header class="futuristic-header text-center py-5">
     <h1 class="futuristic-title">Featured Products</h1>
     <p class="futuristic-subtitle">Explore our exclusive collection of cutting-edge products.</p>
   </header>
 
-  <!-- Highlighted Product Section -->
+
   <div class="highlighted-product text-center p-4 mb-5">
     <p class="highlight-text">🔥 <strong>Special Offer:</strong> This product is trending right now! 🔥</p>
   </div>
 
-  <!-- Product Grid -->
+
   <div class="product-grid">
     <div *ngFor="let product of products" class="product-card">
       <div class="product-image">
-        <!-- Dynamically select the image based on the product's ID -->
+  
         <img [src]="'assets/images/product' + product.id + '.jpg'" [alt]="product.name" class="img-fluid">
       </div>
       <div class="product-details">
@@ -29,7 +29,7 @@
     <a routerLink="/" class="btn-back-home">Back to Home</a>
   </div>
 
-  <!-- Footer Section -->
+
   <footer class="futuristic-footer text-center py-4">
     <p>&copy; 2023 Futuristic Products. All rights reserved.</p>
   </footer>

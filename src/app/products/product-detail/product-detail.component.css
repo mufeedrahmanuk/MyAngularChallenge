@@ -1,7 +1,6 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
 
-/* Global Styles */
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #0a0a0a;
@@ -10,14 +9,14 @@ body {
   padding: 0;
 }
 
-/* Product Details Container */
+
 .futuristic-product-details {
   display: flex;
   min-height: 100vh;
   background: linear-gradient(135deg, #1a1a1d, #0a0a0a);
 }
 
-/* Left Section: Product Image */
+
 .product-image-section {
   flex: 1;
   position: relative;
@@ -44,7 +43,7 @@ body {
   background: linear-gradient(135deg, rgba(255, 77, 0, 0.3), rgba(77, 0, 255, 0.3));
 }
 
-/* Right Section: Product Info */
+
 .product-info-section {
   flex: 1;
   padding: 40px;
@@ -75,7 +74,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* Key Features Section */
+
 .key-features {
   margin-bottom: 40px;
 }
@@ -109,7 +108,7 @@ body {
   top: -5px;
 }
 
-/* Call-to-Action Buttons */
+
 .cta-buttons {
   display: flex;
   gap: 20px;
@@ -152,7 +151,7 @@ body {
   box-shadow: 0 0 15px rgba(255, 77, 0, 0.8);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .futuristic-product-details {
     flex-direction: column;

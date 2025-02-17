@@ -10,8 +10,8 @@ import { USERS } from '../mock-users';
 })
 export class UserDetailComponent implements OnInit {
   userForm: FormGroup;
-  user: any; // Store the user details
-  isUpdated: boolean = false; // Flag to show success message
+  user: any;
+  isUpdated: boolean = false;
 
   constructor(private fb: FormBuilder, private route: ActivatedRoute) {
     this.userForm = this.fb.group({
@@ -22,8 +22,8 @@ export class UserDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!; // Get the user ID from the route
-    this.user = USERS.find(u => u.id === id); // Find the user in the mock data
+    const id = +this.route.snapshot.paramMap.get('id')!;
+    this.user = USERS.find(u => u.id === id);
     
     if (this.user) {
       this.userForm.patchValue({
@@ -36,14 +36,12 @@ export class UserDetailComponent implements OnInit {
 
   onSubmit() {
     if (this.userForm.valid && this.user) {
-      // Update the user object with form values
       this.user.name = this.userForm.value.name;
       this.user.email = this.userForm.value.email;
       this.user.age = this.userForm.value.age;
 
-      // Show success message
       this.isUpdated = true;
-      setTimeout(() => this.isUpdated = false, 3000); // Hide message after 3 seconds
+      setTimeout(() => this.isUpdated = false, 3000);
     } else {
       console.log('Form not valid');
     }

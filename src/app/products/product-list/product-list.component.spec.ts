@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductListComponent } from './product-list.component';
-import { DataService } from '../../shared/data.service'; // Import the DataService
+import { DataService } from '../../shared/data.service';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ProductListComponent', () => {
@@ -9,12 +9,12 @@ describe('ProductListComponent', () => {
   let dataServiceSpy: jasmine.SpyObj<DataService>;
 
   beforeEach(() => {
-    dataServiceSpy = jasmine.createSpyObj('DataService', ['addToFavorites']); // Correct way to mock DataService
+    dataServiceSpy = jasmine.createSpyObj('DataService', ['addToFavorites']);
 
     TestBed.configureTestingModule({
       declarations: [ProductListComponent],
       imports: [RouterTestingModule],
-      providers: [{ provide: DataService, useValue: dataServiceSpy }] // Provide the mock DataService
+      providers: [{ provide: DataService, useValue: dataServiceSpy }]
     });
 
     fixture = TestBed.createComponent(ProductListComponent);
@@ -29,7 +29,7 @@ describe('ProductListComponent', () => {
   it('should add product to favorites', () => {
     const product = { name: 'Test Product', id: 1 };
 
-    component.addProductToFavorites(product); // Call the method
-    expect(dataServiceSpy.addToFavorites).toHaveBeenCalledWith(product); // Verify the method call with correct product
+    component.addProductToFavorites(product);
+    expect(dataServiceSpy.addToFavorites).toHaveBeenCalledWith(product);
   });
 });

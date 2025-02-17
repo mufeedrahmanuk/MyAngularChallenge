@@ -1,17 +1,17 @@
 <div class="futuristic-product-details" *ngIf="product">
-  <!-- Left Section: Product Image -->
+
   <div class="product-image-section">
     <img [src]="product.image" [alt]="product.name" class="product-image">
     <div class="image-overlay"></div>
   </div>
 
-  <!-- Right Section: Product Details -->
+
   <div class="product-info-section">
     <h1 class="product-name">{{ product.name | uppercase }}</h1>
     <p class="product-price">${{ product.price }}</p>
     <p class="product-description">{{ product.description }}</p>
 
-    <!-- Key Features List -->
+
     <div class="key-features">
       <h3>Key Features</h3>
       <ul>
@@ -22,7 +22,6 @@
       </ul>
     </div>
 
-    <!-- Call-to-Action Buttons -->
     <div class="cta-buttons">
       <button class="btn-buy-now">Buy Now</button>
       <button class="btn-add-to-cart">Add to Cart</button>
