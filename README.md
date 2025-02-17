@@ -1,27 +1,77 @@
 # MyAngularChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+This Angular project demonstrates modular architecture, lazy loading, core Angular concepts, routing, data management, and testing.
 
-## Development server
+## Project Structure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+src/ ├── app/ │ ├── core/ # Shared services, pipes, directives │ ├── products/ # Lazy-loaded feature module for products │ ├── users/ # Lazy-loaded feature module for users │ ├── components/ # Reusable components │ ├── app-routing.module.ts │ └── app.module.ts
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup Instructions
 
-## Build
+### Prerequisites:
+- Install Node.js (latest version)
+- Install Angular CLI globally: npm install -g @angular/cli
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Installation:
+1. Clone the repository: git clone <repository-url> cd MyAngularChallenge
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Install dependencies: npm install
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Running the App:
+1. Run the application: ng serve
 
-## Further help
+2. Open `http://localhost:4200` in your browser to view the application.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Running Tests:
+1. Run unit tests: ng test
+
+
+## Features
+
+- **Lazy Loading:** 
+- The application is modularized with lazy-loaded modules for `Products` and `Users`.
+
+- **Routing:**
+- Root route `/` for the home page, `/products` for products, and `/users` for users.
+- Child routes are implemented under `/products/list` and `/products/:id`.
+
+- **Components:**
+- Each feature module has at least two components demonstrating data binding, property/event binding, and custom directives.
+
+- **Forms:**
+- A reactive form is implemented with real-time validation and feedback.
+
+- **HTTP:**
+- Data fetching with `HttpClient` from a mock API and display in a list format.
+
+- **Shared Service:**
+- A shared service is provided in the root to manage shared data across components.
+
+## Testing
+
+Unit tests are provided for:
+- **One component** and **one service**, demonstrating Angular testing utilities with `TestBed`.
+
+## Approach and Design Decisions
+
+- **Modular Architecture:** 
+- I structured the app into separate lazy-loaded feature modules for better scalability and maintainability.
+
+- **State Sharing:**
+- A shared service is used to manage common data (e.g., a favorites list) between different components.
+
+- **Performance Considerations:** 
+- OnPush change detection was applied to optimize performance for specific components.
+- I used `trackBy` with `ngFor` to optimize rendering when displaying lists.
+
+- **Testing:** 
+- I used Angular’s `TestBed` to set up unit tests, ensuring basic test coverage for components and services.
+
+
+
+
+
+

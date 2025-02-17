@@ -1,0 +1,210 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* User Details Container */
+.futuristic-user-details {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1d, #0a0a0a);
+  padding: 20px;
+}
+
+/* Left Section: User Info */
+.user-info-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1d, #0a0a0a);
+  border-right: 2px solid #ff4d00;
+}
+
+.user-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff4d00;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 77, 0, 0.8);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 77, 0, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 77, 0, 1), 0 0 30px rgba(255, 77, 0, 0.8);
+  }
+}
+
+.user-email,
+.user-age {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Back to List Button */
+.btn-back-to-list {
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #ff4d00;
+  border-radius: 50px;
+  color: #ff4d00;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn-back-to-list:hover {
+  background: #ff4d00;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 77, 0, 0.8);
+}
+
+/* Right Section: Edit Form */
+.edit-form-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1d, #0a0a0a);
+}
+
+.form-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff4d00;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(255, 77, 0, 0.8);
+  animation: glow 2s infinite alternate;
+}
+
+.user-form {
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ff4d00;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #8e2de2;
+  box-shadow: 0 0 10px rgba(142, 45, 226, 0.8);
+  outline: none;
+}
+
+/* Submit Button */
+.btn-submit {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff4d00, #8e2de2);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 77, 0, 0.8);
+}
+
+.btn-submit:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Success Message */
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .futuristic-user-details {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .user-info-section,
+  .edit-form-section {
+    padding: 20px;
+    border-right: none;
+    border-bottom: 2px solid #ff4d00;
+  }
+
+  .user-name {
+    font-size: 2rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .btn-back-to-list {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+<div class="futuristic-user-details" *ngIf="user">
+  <!-- Left Section: User Details -->
+  <div class="user-info-section">
+    <h1 class="user-name">{{ user.name }}</h1>
+    <p class="user-email">Email: {{ user.email }}</p>
+    <p class="user-age">Age: {{ user.age }}</p>
+    <a routerLink="/users" class="btn-back-to-list">Back to List</a>
+  </div>
+
+  <!-- Right Section: Edit User Form -->
+  <div class="edit-form-section">
+    <h2 class="form-title">Edit User Details</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" placeholder="Name" class="form-control" />
+        <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" placeholder="Email" class="form-control" />
+        <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-danger">
+          Please enter a valid email.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input id="age" formControlName="age" placeholder="Age" class="form-control" type="number" />
+        <div *ngIf="userForm.get('age')?.invalid && userForm.get('age')?.touched" class="text-danger">
+          Age must be at least 18.
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit" [disabled]="userForm.invalid">Submit</button>
+    </form>
+
+    <!-- Success Message -->
+    <div *ngIf="isUpdated" class="success-message">
+      User details updated successfully!
+    </div>
+  </div>
+</div>

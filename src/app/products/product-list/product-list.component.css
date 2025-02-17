@@ -1,0 +1,187 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.futuristic-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.futuristic-header {
+  background: linear-gradient(135deg, #ff4d00, #8e2de2);
+  padding: 40px 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+.futuristic-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 77, 0, 0.8);
+}
+
+.futuristic-subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Highlighted Product */
+.highlighted-product {
+  background: linear-gradient(135deg, #ff4d00, #8e2de2);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 0 20px rgba(255, 77, 0, 0.5);
+  animation: glow 2s infinite alternate;
+}
+
+.highlight-text {
+  margin: 0;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(255, 77, 0, 0.6);
+}
+
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff4d00;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  color: #3cd070;
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Futuristic Button */
+.btn-futuristic {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff4d00, #8e2de2);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-futuristic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 77, 0, 0.8);
+}
+
+/* Back to Home Button */
+.back-to-home {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-back-home {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff4d00, #8e2de2);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-back-home:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 77, 0, 0.8);
+}
+
+/* Footer */
+.futuristic-footer {
+  background: #1a1a1a;
+  border-radius: 15px;
+  margin-top: 40px;
+  padding: 20px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.futuristic-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 77, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 77, 0, 0.8);
+  }
+}
